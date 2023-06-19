@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12" style="margin-top: 60px;">
+      <h3>Create an account</h3>
+      <p class="login">Already have an account? <a [routerLink]=" '/SignIn' "><b>Log in</b></a></p>
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+        <div class="form-group">
+          <div class="name">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="Name" placeholder="Enter Your Name" required formControlName="Name">
+              <div *ngIf="submitted && f['Name'].errors">
+                <div *ngIf="f['Name'].errors && f['Name'].errors['required']" class="validation">Name is required.</div>
+              </div>
+              <label for="Name">Enter Your Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="FamilyName" placeholder="Enter Your Family Name" formControlName="FamilyName">
+              <label for="Name">Enter Your Family Name</label>
+            </div>
+          </div>
+
+          <div class="email">
+            <div class="form-group form-floating mb-3">
+              <input type="email" class="form-control" id="email" formControlName="Email" required placeholder="Enter Your Email Address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+              <div *ngIf="submitted && f['Email'].errors">
+                <div *ngIf="f['Email'].errors && f['Email'].errors['required']" class="validation">Email is required.</div>
+                <div *ngIf="f['Email'].errors['pattern']" class="validation">Please enter a valid email address.</div>
+              </div>
+              <label for="email">Enter Your Email Address</label>
+            </div>
+          </div>
+
+          <div class="password">
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="Password" formControlName="Password" placeholder="Enter a Password" required>
+              <div *ngIf="submitted && f['Password'].errors">
+                <div *ngIf="f['Password'].errors && f['Password'].errors['required']" class="validation">Password is required.</div>
+                <div *ngIf="f['Password'].errors['minlength']" class="validation">Password at least 8 characters.</div>
+              </div>
+              <label for="Password">Enter a Password</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="ConfirmPassword" formControlName="ConfirmPassword" placeholder="Confirm Your Password">
+                <div *ngIf="submitted && f['ConfirmPassword'].errors">
+                  <div *ngIf="f['ConfirmPassword'].errors && f['ConfirmPassword'].errors['required']" class="validation">Confirm Password is required.</div>
+                  <div *ngIf="f['ConfirmPassword'].errors['MustMatch']" class="validation">The confirm password does not match</div>
+                </div>
+              <label for="ConfirmPassword">Confirm Your Password</label>
+            </div>
+            </div>
+
+            <div class="role">
+              <div class="form-floating mb-3">
+                <select class="form-control form-select" id="Role" name="Role" formControlName="Role">
+                  <option value="Player">Player</option>
+                  <option value="QuizCreator">Quiz Creator</option>
+                </select>
+                <label for="Role">Your Role</label>
+              </div>
+              <!-- <div class="ageInput"></div> -->
+            </div>
+
+              <div id="ageInput" class="hidden">
+                <div class="form-group form-floating mb-3">
+                  <input type="date" class="form-control" id="Age" placeholder="Your Age">
+                  <label for="email">Your Age</label>
+                </div>
+              </div>
+
+          <div class="gender">
+            <p>Gender</p>
+            &nbsp;    &nbsp;    &nbsp;
+            <div class="form-check"  style="display: inline-block;">
+              <div *ngFor="let gender of genders">
+                <input class="form-check-input" type="radio" name="Gender" [value]="gender" formControlName="Gender"> {{gender}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+      </form>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img src="assets/pic/SignUp.png" alt="Sign-Up-Vector-Pic" class="img-fluid">
+    </div>
+  </div>
+</div>

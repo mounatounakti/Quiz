@@ -1,0 +1,83 @@
+<app-sidebar></app-sidebar>
+<app-navbar></app-navbar>
+
+<h4>Add Quiz</h4>
+<div class="container">
+  <div class="col-md-6" style="margin-left: 50px; margin-top: 30px;">
+    <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+      <div class="form-group form-floating mb-3">
+        <select class="form-control form-select" id="Categorie" formControlName="Category">
+          <option>Science</option>
+          <option>Sport</option>
+          <option>History</option>
+          <option>Gaming</option>
+          <option>Movies and Series</option>
+          <option>Technology</option>
+          <option>Music</option>
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Art</option>
+          <option>Geography</option>
+          <option>Literature</option>
+          <option>Politics</option>
+        </select>
+        <div *ngIf="submitted && f['Category'].errors">
+          <div *ngIf="f['Category'].errors && f['Category'].errors['required']" class="validation">Name is required.</div>
+        </div>
+        <label for="Categorie">Choose The Category</label>
+      </div>
+
+      <div class="form-group form-floating mb-3">
+        <input type="text" class="form-control" id="NameQuiz" required placeholder="Enter Quiz Name" formControlName="NameQuiz">
+        <div *ngIf="submitted && f['NameQuiz'].errors">
+          <div *ngIf="f['NameQuiz'].errors && f['NameQuiz'].errors['required']" class="validation">Quiz name is required.</div>
+        </div>
+        <label for="NameQuiz">Enter Quiz Name</label>
+      </div>
+<!-- 
+      <div class="form-group form-floating mb-3">
+        <input type="text" class="form-control" id="CoinCost" required placeholder="Enter Coin Cost" formControlName="CoinCost">
+        <div *ngIf="submitted && f['CoinCost'].errors">
+          <div *ngIf="f['CoinCost'].errors && f['CoinCost'].errors['required']" class="validation">Coin cost is required.</div>
+        </div>
+        <label for="CoinCost">Enter Coin Cost</label>
+      </div> -->
+      <button type="submit" class="btn btn-next">Next > </button>
+
+      <hr>
+
+      <ng-container *ngFor="let question of questions; let i = index">
+        <div *ngIf="submitted">
+        <h5>Question {{ i + 1 }}</h5>
+        <div class="form-group form-floating mb-3">
+          <input type="text" class="form-control question" [id]="'Question' + (i + 1)" placeholder="Write down your question"
+            formControlName="question{{ i + 1 }}">
+          <label [for]="'Question' + (i + 1)">Write down your question</label>
+        </div>
+        <div class="options">
+          <h6>Options</h6>
+          <div *ngFor="let option of options[i]; let j = index" class="Options">
+            <div class="form-group form-floating mb-3">
+              <input type="text" class="form-control" [id]="'Answer' + (i + 1) + (j + 1)" placeholder="Option {{ j + 1 }}"
+                [(ngModel)]="option.text" [formControlName]="'option' + (i + 1) + (j + 1)">
+              <label [for]="'Answer' + (i + 1) + (j + 1)">Option {{ j + 1 }}</label>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [id]="'Answer' + (i + 1) + (j + 1) + '-true'" [name]="'optionValue' + (i + 1) + (j + 1)" value="true">
+                <label class="form-check-label" [for]="'Answer' + (i + 1) + (j + 1) + '-true'">&nbsp;&nbsp;True</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [id]="'Answer' + (i + 1) + (j + 1) + '-false'" [name]="'optionValue' + (i + 1) + (j + 1)" value="false">
+                <label class="form-check-label" [for]="'Answer' + (i + 1) + (j + 1) + '-false'">&nbsp;&nbsp;False</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </ng-container>
+      <button type="button" class="btn btn-add" (click)="addQuestion()">+ Add question</button>
+      <button type="button" class="btn btn-primary" (click)="alertWithSuccess()">Add Quiz</button>
+    </form>
+  </div>
+</div>

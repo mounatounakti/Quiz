@@ -1,0 +1,13 @@
+<app-sidebar></app-sidebar>
+<app-navbar></app-navbar>
+
+<div class="quizList">
+  <div *ngFor="let quiz of quizzes" >
+    <div class="card">
+      <div class="card-title"><b>{{ quiz.nameQ }}</b></div>
+      <p class="creator">Creator: {{ quiz.creator.nameC }}</p>
+      <button type="submit" class="btn btn-primary" [routerLink]="'/Game/' + quiz.idQuiz">Start</button>
+      <p class="date">{{ quiz.created_at }}</p>
+    </div>
+  </div>
+</div>

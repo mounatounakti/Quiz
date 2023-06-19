@@ -1,0 +1,90 @@
+.container{
+  margin-top: 60px;
+  height: 600px;
+  width: 950px;
+  border-radius: 10px;
+}
+
+h3{
+  margin-top: 70px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.login{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+b{
+  color:#502a6f;
+  text-decoration: underline;
+}
+
+p{
+  font-size: 17px;
+}
+
+a{
+  cursor: pointer;
+  color: #502a6f;
+}
+
+.forget{
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+img{
+  position: absolute;
+  top: 140px;
+  left: 670px;
+  width: 650px;
+  height: 450px;
+}
+
+.form-floating{
+  width: 450px;
+}
+
+.form-floating label {
+  color: grey;
+  font-size: 14px;
+}
+
+.form-control {
+  box-shadow: none;
+  border-color:#502a6f;
+  border-radius: 10px;
+}
+
+button{
+  margin-top: 9px;
+  margin-left: 20px;
+  width: 400px;
+  border-radius: 10px;
+  border-color: #502a6f ;
+  background-color: #502a6f ;
+}
+
+button:hover{
+  border-color: #502a6f ;
+  background-color: #502a6f ;
+}
+
+.validation{
+  color: #502a6f ;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+

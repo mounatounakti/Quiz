@@ -1,0 +1,131 @@
+.container{
+  margin-top: 60px;
+  height: 600px;
+  width: 950px;
+  border-radius: 10px;
+}
+
+h3{
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.login{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+b{
+  color:#502a6f;
+  text-decoration: underline;
+}
+
+p{
+  font-size: 17px;
+}
+
+img{
+  position: absolute;
+  top: 140px;
+  left: 670px;
+  width: 650px;
+  height: 450px;
+}
+
+.name{
+  display: flex;
+  gap: 10px;
+}
+
+.password{
+  display: flex;
+  gap: 10px;
+}
+
+a{
+  cursor: pointer;
+}
+
+.email .form-floating input {
+  width: 453px;
+}
+
+.role .form-floating select {
+  width: 453px;
+}
+
+.form-floating{
+  width: 450px;
+}
+
+.form-floating label {
+  color: grey;
+  font-size: 14px;
+}
+
+.form-control {
+  box-shadow: none;
+  border-color: #502a6f;
+  border-radius: 10px;
+}
+
+input[type="radio"] {
+  box-shadow: none;
+}
+
+input[type="radio"]:checked {
+  background-color: #502a6f;
+  border-color: #502a6f;
+}
+
+input[type="radio"]:active {
+  border-color: #502a6f;
+}
+
+select:focus {
+  border-color: #502a6f;
+}
+
+option:nth-child(1):hover{
+  background-color: #502a6f;
+}
+
+.gender{
+  margin-top: 0px;
+  display: flex;
+  margin-left: 80px;
+}
+
+button{
+  margin-top: 9px;
+  margin-left: 27px;
+  width: 400px;
+  border-radius: 10px;
+  border-color: #502a6f ;
+  background-color: #502a6f ;
+}
+
+button:hover{
+  border-color: #502a6f ;
+  background-color: #502a6f ;
+}
+
+button:active{
+  border-color: #502a6f ;
+  background-color: #502a6f ;
+}
+
+.validation{
+  color: #502a6f ;
+  font-size: 10px;
+}
+
+
+
+
+
+
+

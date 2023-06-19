@@ -1,0 +1,31 @@
+.nav{
+  margin-top: 0;
+}
+
+.container{
+  max-width: 600px;
+  margin-top: 90px;
+  padding: 10px;
+}
+
+ol{
+  padding: 10;
+}
+
+li{
+  list-style-type: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+li .card:hover{
+  background-color: #EEE;
+}
+
+
+
+
+
+
+
+

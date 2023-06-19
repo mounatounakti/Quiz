@@ -1,0 +1,93 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+}
+
+h4{
+  position: absolute;
+  top: 15px;
+  left: 150px;
+}
+
+.form-floating input {
+  width: 400px;
+}
+
+.form-floating select {
+  width: 400px;
+}
+
+.form-floating label {
+  color: grey;
+  font-size: 14px;
+}
+
+.form-check input{
+  width: 16px;
+  margin-left: 5px;
+}
+
+.Options .form-floating input{
+  width: 300px;
+}
+
+
+input[type="radio"] {
+  box-shadow: none;
+}
+
+input[type="radio"]:checked {
+  background-color: #502a6f;
+  border-color: #502a6f;
+}
+
+input[type="radio"]:active {
+  border-color: #502a6f;
+}
+
+select:focus {
+  border-color: #502a6f;
+}
+
+.form-control {
+  box-shadow: none;
+  border-color: #502a6f;
+  border-radius: 10px;
+}
+
+.Options{
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-add{
+  color: #502a6f;
+  text-decoration: underline;
+  font-size: 13px;
+  margin-left: 300px;
+}
+
+.btn-next{
+  color: #502a6f;
+  text-decoration: underline;
+  font-size: 13px;
+  margin-left: 370px;
+}
+
+.btn-primary {
+  width: 200px;
+  border-radius: 10px;
+  border-color: #502a6f;
+  background-color: #502a6f;
+  position: relative;
+  margin:20px 0px 40px 140px ;
+}
+
+
+.validation{
+  color: #502a6f ;
+  font-size: 10px;
+}
