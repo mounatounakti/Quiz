@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import Swal from 'sweetalert2';
 
 interface Option {
   text: string;
@@ -58,8 +57,8 @@ export class AddQuizComponent {
     console.log(this.reactiveForm.value);
   }
 
-  alertWithSuccess(){
-    Swal.fire("Thank you ...",'Your quiz is added successfully','success');
-  }
+  // alertWithSuccess(){
+  //   Swal.fire("Thank you ...",'Your quiz is added successfully','success');
+  // }
 }
 

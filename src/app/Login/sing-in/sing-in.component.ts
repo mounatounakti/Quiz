@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { AuthService } from 'src/app/service/auth.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,11 +13,11 @@ export class SingInComponent implements OnInit {
   submitted: boolean = false;
   email: string = '';
   password: string = '';
+  snackBar: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private snackBar: MatSnackBar,
     private router: Router
   ) {
     this.reactiveForm = this.formBuilder.group({
